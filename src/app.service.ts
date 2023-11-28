@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { CreateChampionDto } from './dto/champion.dto';
+import { CreateChampionDto } from './dto/champion.req.dto';
 import { Difficulty } from './enums/difficulty.enum';
 
 @Injectable()

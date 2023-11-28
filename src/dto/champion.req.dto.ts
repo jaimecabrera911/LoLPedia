@@ -1,7 +1,7 @@
-import { AbilityDto } from './ability.dto';
+import { AbilityReqDto } from './ability.req.dto';
 import { Difficulty } from '../enums/difficulty.enum';
 import { ApiProperty } from '@nestjs/swagger';
-import { PassiveDto } from './passive.dto';
+import { PassiveReqDto } from './passive.req.dto';
 
 export class CreateChampionDto {
   @ApiProperty()
@@ -14,10 +14,10 @@ export class CreateChampionDto {
   role: string;
   @ApiProperty()
   image: string;
-  @ApiProperty({ type: PassiveDto })
-  passive: PassiveDto;
-  @ApiProperty({ type: [AbilityDto] })
-  abilities: AbilityDto[];
+  @ApiProperty({ type: PassiveReqDto })
+  passive: PassiveReqDto;
+  @ApiProperty({ type: [AbilityReqDto] })
+  abilities: AbilityReqDto[];
   @ApiProperty({ name: 'difficulty', enum: Difficulty })
   difficulty: Difficulty;
   @ApiProperty()
@@ -30,7 +30,7 @@ export class CreateChampionDto {
     title?: string,
     role?: string,
     image?: string,
-    abilities?: AbilityDto[],
+    abilities?: AbilityReqDto[],
     difficulty?: Difficulty,
     builds?: string[],
     skins?: string[],

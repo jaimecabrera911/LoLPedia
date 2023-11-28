@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class PassiveDto {
+export class PassiveReqDto {
   @ApiProperty()
   name: string;
   @ApiProperty()

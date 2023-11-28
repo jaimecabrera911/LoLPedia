@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { ChampionService } from '../services/champion.service';
-import { CreateChampionDto } from '../dto/champion.dto';
+import { CreateChampionDto } from '../dto/champion.req.dto';
 
 @Controller('/champions')
 export class ChampionController {
@@ -13,6 +13,6 @@ export class ChampionController {
 
   @Post()
   async createChampion(@Body() createChampionDto: CreateChampionDto) {
-    return this.championService.createchampion(createChampionDto);
+    return this.championService.createChampion(createChampionDto);
   }
 }

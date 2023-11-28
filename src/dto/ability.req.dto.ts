@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class AbilityDto {
+export class AbilityReqDto {
   @ApiProperty()
   name: string;
   @ApiProperty()
